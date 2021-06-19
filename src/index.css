@@ -1,36 +1,76 @@
 body {
-  font: 14px "Century Gothic", Futura, sans-serif;
-  margin: 20px;
+  background: #45526c;
+  font-family: "Century Gothic", Futura, sans-serif;
+  margin: 80px auto;
+  max-width: 400px;
 }
 
 ol,
 ul {
-  padding-left: 30px;
+  color: #5aa897;
+  font-weight: bold;
+  padding-left: 20px;
 }
-
-.board-row:after {
+a .board-row:after {
   clear: both;
   content: "";
   display: table;
 }
 
-.status {
+h1 {
+  color: #fff;
+  font-size: 42px;
+  font-weight: 700;
+  text-shadow: 2px 2px 0px#5aa897;
+}
+
+footer {
+  color: #f8a488;
+  font-size: 10px;
+  margin-top: 4px;
+}
+
+footer a {
+  color: #5aa897;
+  text-decoration: none;
+}
+
+footer a:hover {
+  color: #fff;
+}
+
+.btn {
+  background: #5aa897;
+  color: #fff;
+  margin: 4px;
+  padding: 4px 8px 4px 8px;
+}
+
+.btn:hover {
+  background: #f8a488;
+  color: #fff;
+}
+
+.Status {
+  color: #45526c;
+  font-size: 20px;
+  font-weight: bold;
   margin-bottom: 10px;
+  padding-left: 24px;
 }
 
 .square {
-  background: #fff;
-  border: 1px solid #999;
+  border: 1px solid #fff;
   float: left;
-  font-size: 24px;
+  font-size: 32px;
   font-weight: bold;
-  line-height: 34px;
-  height: 34px;
+  line-height: 42px;
+  height: 42px;
   margin-right: -1px;
   margin-top: -1px;
   padding: 0;
   text-align: center;
-  width: 34px;
+  width: 42px;
 }
 
 .square:focus {
@@ -42,10 +82,31 @@ ul {
 }
 
 .game {
+  border-radius: 8px;
+  background: #f8f5f1;
   display: flex;
   flex-direction: row;
+  padding: 20px;
+}
+
+.game-board {
+  margin-top: 41px;
+}
+
+.game-board button {
+  background: #f8a488;
+  color: #fff;
+  border-radius: 4px;
+}
+
+.game-board button:hover {
+  background: #5aa897;
 }
 
 .game-info {
   margin-left: 20px;
+}
+
+.NextPlayer {
+  color: #f8a488;
 }

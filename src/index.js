@@ -92,7 +92,9 @@ class Game extends React.Component {
       const desc = move ? "Go to move #" + move : "Go to game start";
       return (
         <li key={move}>
-          <button onClick={() => this.jumpTo(move)}>{desc}</button>
+          <button onClick={() => this.jumpTo(move)} className="btn">
+            {desc}
+          </button>
         </li>
       );
     });
@@ -113,7 +115,7 @@ class Game extends React.Component {
           />
         </div>
         <div className="game-info">
-          <div>{status}</div>
+          <div className="Status">{status}</div>
           <ol>{moves}</ol>
         </div>
       </div>
@@ -145,19 +147,3 @@ function calculateWinner(squares) {
   }
   return null;
 }
-
-// history = [
-//   // Before first move
-//   {
-//     squares: [null, null, null, null, null, null, null, null, null],
-//   },
-//   // After first move
-//   {
-//     squares: [null, null, null, null, "X", null, null, null, null],
-//   },
-//   // After second move
-//   {
-//     squares: [null, null, null, null, "X", null, null, null, "O"],
-//   },
-//   //...
-// ];
